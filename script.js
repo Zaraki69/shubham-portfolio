@@ -1,14 +1,14 @@
-var typed = new Typed('#typing', {
+var typed = new Typed("#typing",{
 
-strings: [
+strings:[
 "DevOps Engineer",
-"AWS Specialist",
-"Kubernetes Enthusiast",
-"Automation Builder"
+"AWS Certified",
+"CI/CD Automation Specialist",
+"Kubernetes Enthusiast"
 ],
 
 typeSpeed:60,
 backSpeed:40,
 loop:true
 
-});
+})
