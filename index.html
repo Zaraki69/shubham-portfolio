@@ -10,12 +10,9 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
-
 
 <body>
 
@@ -23,9 +20,13 @@
 
 <nav>
 
-<h2 class="logo">SG</h2>
+<div class="logo">
+<img src="assets/profile.png" class="profile">
+<span>Shubham</span>
+</div>
 
 <ul>
+<li><a href="#hero">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
@@ -37,37 +38,43 @@
 </header>
 
 
-<section class="hero">
+<section id="hero" class="hero">
 
-<div class="terminal">
+<div class="hero-left">
 
-<p>> Hello World</p>
+<h1>Hi, I'm Shubham</h1>
 
-<p>> I'm <span class="highlight">Shubham Gajjewar</span></p>
+<h2><span id="typing"></span></h2>
 
-<p>> <span id="typing"></span></p>
-
-</div>
+<p>
+DevOps Engineer specializing in CI/CD automation,
+cloud infrastructure and Kubernetes platforms.
+</p>
 
 <a class="btn" href="assets/resume.pdf">Download Resume</a>
 
+</div>
+
+<div class="hero-right">
+
+<img src="assets/profile.png" class="hero-photo">
+
+</div>
+
 </section>
 
 
-<section id="about" data-aos="fade-up">
+<section id="about">
 
-<h2>About</h2>
+<h2>About Me</h2>
 
 <p>
-
-DevOps Engineer with 3+ years experience building CI/CD pipelines,
+DevOps Engineer with 3+ years of experience building CI/CD pipelines,
 automating infrastructure using Terraform, and deploying scalable
 applications on AWS and Kubernetes.
-
 </p>
 
 </section>
-
 
 
 <section id="skills">
@@ -92,45 +99,36 @@ applications on AWS and Kubernetes.
 </section>
 
 
-
-<section id="pipeline">
-
-<h2>CI/CD Pipeline</h2>
-
-<div class="pipeline">
-
-<div>Code</div>
-<div>Build</div>
-<div>Test</div>
-<div>Docker</div>
-<div>Deploy</div>
-
-</div>
-
-</section>
-
-
-
 <section id="projects">
 
 <h2>Projects</h2>
 
-<div class="project-grid">
+<div class="tabs">
+
+<button class="tab active" onclick="openProject('k8s', event)">
+Kubernetes
+</button>
+
+<button class="tab" onclick="openProject('docker', event)">
+Docker App
+</button>
+
+</div>
 
 
-<div class="project-card">
+<div class="tab-content active" id="k8s">
 
-<h3>Kubernetes Observability</h3>
+<h3>Kubernetes Observability Platform</h3>
 
 <p>
-Monitoring stack using Prometheus, Grafana, FluentD
-and Elasticsearch to track container workloads.
+Monitoring stack using Prometheus, Grafana,
+FluentD and Elasticsearch to track container workloads.
 </p>
 
 </div>
 
 
-<div class="project-card">
+<div class="tab-content" id="docker">
 
 <h3>Multi Container Web App</h3>
 
@@ -141,11 +139,7 @@ and Nginx reverse proxy.
 
 </div>
 
-
-</div>
-
 </section>
-
 
 
 <section id="contact">
@@ -164,7 +158,6 @@ linkedin.com/in/shubham-gajjewar
 </section>
 
 
-
 <footer>
 
 <p>© 2026 Shubham Gajjewar</p>
@@ -173,13 +166,6 @@ linkedin.com/in/shubham-gajjewar
 
 
 <script src="script.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-AOS.init();
-</script>
-
 
 </body>
 
